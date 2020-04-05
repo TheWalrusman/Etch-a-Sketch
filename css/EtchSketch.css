@@ -1,0 +1,17 @@
+body{
+  background-color: darkslateblue;
+}
+label{
+  color: white;
+}
+#gridContainer{
+  display: grid;
+  width: 95vh;
+  height: 95vh;
+  background-color: #b3d4fc;
+  grid-template-rows: repeat(16,1fr );
+  grid-template-columns: repeat(16,1fr);
+  align-content: center;
+  justify-items: stretch;
+  align-items: stretch;
+}
