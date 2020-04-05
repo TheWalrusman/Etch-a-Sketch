@@ -8,7 +8,7 @@ function randomHexColor() {
   }
   return colorCode;
 }
-function increaseBlackLevel() {
+async function increaseBlackLevel() {
     let colorValue = this.style.backgroundColor;
     colorValue = colorValue.slice(4,colorValue.length-1);
     colorValue = colorValue.split(',');
@@ -37,13 +37,13 @@ function gridBoxSetup() {
     newGrid.style.backgroundColor = `rgb(255, 255, 255)`;
     //currentGrid.textContent = `${i+1}`;
     gridContainer.appendChild(newGrid);
-    newGrid.addEventListener("mouseover",function(e){ increaseBlackLevel.call(this, e) },false  );
+    newGrid.addEventListener("mouseenter", function(e){ increaseBlackLevel.call(this, e) },true  );
     //document.getElementById(`${i}`).style.backgroundColor = `#${randomHexColor()}`;
   }
 
 
 
 }
-gridBoxSetup(16);
+gridBoxSetup();
 document.getElementById('boxSizeValue').addEventListener("change", gridBoxSetup);
 document.getElementById('clearBox').addEventListener("click", gridBoxSetup);
