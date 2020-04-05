@@ -8,7 +8,7 @@ function randomHexColor() {
   }
   return colorCode;
 }
-async function increaseBlackLevel() {
+ function increaseBlackLevel() {
     let colorValue = this.style.backgroundColor;
     colorValue = colorValue.slice(4,colorValue.length-1);
     colorValue = colorValue.split(',');
