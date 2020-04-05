@@ -37,7 +37,7 @@ function gridBoxSetup() {
     newGrid.style.backgroundColor = `rgb(255, 255, 255)`;
     //currentGrid.textContent = `${i+1}`;
     gridContainer.appendChild(newGrid);
-    newGrid.addEventListener("mousemove", function(e){ increaseBlackLevel.call(this, e) },true  );
+    newGrid.addEventListener("mouseenter", function(e){ increaseBlackLevel.call(this, e) },true  );
     //document.getElementById(`${i}`).style.backgroundColor = `#${randomHexColor()}`;
   }
 
